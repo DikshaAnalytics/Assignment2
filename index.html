@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T747PHDM');</script>
-<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interactive Website</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: auto; padding: 20px; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
-        h1 { text-align: center; color: #333; }
-        .button { display: block; margin: 20px auto; background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; transition: 0.3s; }
-        .button:hover { background-color: #45a049; }
-        form { text-align: center; margin: 20px 0; }
-        label { font-weight: bold; }
-        input[type="text"], input[type="file"] { padding: 8px; margin: 5px 0; width: 100%; }
-        input[type="submit"] { background-color: #008CBA; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; transition: 0.3s; }
-        input[type="submit"]:hover { background-color: #007bb5; }
-        video { display: block; margin: 20px auto; }
-    </style>
+    <title>FashionHub - Trendy Clothing</title>
+    <link rel="stylesheet" href="diksha.css">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T747PHDM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="container">
-        <h1>Welcome to My Interactive Website</h1>
-        <button class="button" onclick="alert('Button clicked!')">Click Me!</button>
-        
-        <form action="/submit" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <input type="submit" value="Submit">
-        </form>
-        
-        <video width="320" height="240" controls>
+    <header>
+        <nav class="navbar">
+            <div class="logo">FashionHub</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <video autoplay muted loop class="bg-video">
             <source src="853800-hd_1920_1080_25fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="file">Upload a file:</label>
-            <input type="file" id="file" name="file">
-            <input type="submit" value="Upload">
-        </form>
-    </div>
-    <link rel="stylesheet" href="diksha.css">
+        <div class="hero-content">
+            <h1>Discover Your Style</h1>
+            <p>Trendy. Comfortable. Affordable.</p>
+            <a href="#collection" class="btn">Shop Now</a>
+        </div>
+    </section>
 
+    <section class="collection" id="collection">
+        <h2>Featured Collection</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="summer dress.jpg" alt="Product 1">
+                <h3>Summer Dress</h3>
+                <p>$49.99</p>
+            </div>
+            <div class="product-card">
+                <img src="denim jacket.avif" alt="Product 2">
+                <h3>Denim Jacket</h3>
+                <p>$69.99</p>
+            </div>
+            <div class="product-card">
+                <img src="casual shirt.jfif" alt="Product 3">
+                <h3>Casual Shirt</h3>
+                <p>$39.99</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FashionHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
